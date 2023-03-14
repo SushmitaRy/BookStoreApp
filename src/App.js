@@ -23,7 +23,7 @@ import Login from './components/User/Login';
   
     const fetchProducts = async () => {
       const { data } = await commerce.products.list();
-  
+      
       setProducts(data);
     };
   

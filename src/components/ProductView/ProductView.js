@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { Container, Grid, Button, Typography } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 import {commerce} from '../../lib/commerce';
