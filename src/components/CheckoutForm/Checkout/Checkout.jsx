@@ -5,7 +5,7 @@ import { commerce } from '../../../lib/commerce';
 import AddressForm from '../AddressForm';
 import useStyles from './styles';
 
-const steps = ['Shipping address', 'Payment details'];
+const steps = ['Shipping address', ''];
 
 const Checkout = ({ cart, onCaptureCheckout, order, error }) => {
   const [checkoutToken, setCheckoutToken] = useState(null);

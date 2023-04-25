@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Redirect } from 'react-router-dom';
 import { CssBaseline } from '@material-ui/core';
 import {commerce} from './lib/commerce';
 import Products from './components/Products/Products';
@@ -97,7 +98,7 @@ import Login from './components/User/Login';
               <Checkout cart={cart} order={order} onCaptureCheckout={handleCaptureCheckout} error={errorMessage} />
             </Route>
             
-            <Route path="/Login" exact>
+            <Route path="/Login"  exact>
               <Login />
             </Route>
 

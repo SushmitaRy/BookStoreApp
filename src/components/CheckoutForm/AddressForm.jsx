@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import { commerce } from '../../lib/commerce';
 import FormInput from './CustomTextField';
 
+
 const AddressForm = ({ checkoutToken, test }) => {
   const [shippingCountries, setShippingCountries] = useState([]);
   const [shippingCountry, setShippingCountry] = useState('');
@@ -14,7 +15,7 @@ const AddressForm = ({ checkoutToken, test }) => {
   const [shippingOptions, setShippingOptions] = useState([]);
   const [shippingOption, setShippingOption] = useState('');
   const methods = useForm();
-  
+
 
   const fetchShippingCountries = async (checkoutTokenId) => {
     const { countries } = await commerce.services.localeListShippingCountries(checkoutTokenId);
@@ -38,7 +39,7 @@ const AddressForm = ({ checkoutToken, test }) => {
   };
 
   const CheckoutOrder = () => {
-    alert("Order placed thank you");
+    //alert("Order placed thank you");
     //routeChange();
   }
 
@@ -102,7 +103,10 @@ const AddressForm = ({ checkoutToken, test }) => {
           <br />
           <div style={{ display: 'flex', justifyContent: 'space-between' }}>
             <Button component={Link} variant="outlined" to="/cart">Back to Cart</Button>
-            <Button type="submit" variant="contained" color="primary">Place Order</Button>
+            
+              <Button component={Link} to="/" type="submit" variant="contained" color="primary">Place Order</Button>
+        
+
           </div>
         </form>
       </FormProvider>
